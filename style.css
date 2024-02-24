@@ -102,12 +102,12 @@ body {
   padding-top: 20px;
   color: #f4f4f4;
   font-size: 36px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .main__subtitle {
   padding-top: 24px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   color: #f4f4f4;
 }
 .main__text {
@@ -126,6 +126,8 @@ body {
 .main__title--small {
   color: #f4f4f4;
   padding-top: 6px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .btn__container {
@@ -283,26 +285,60 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
+
+.modal__img {
+  width: 122px;
+  height: 111px;
+}
+
+.modal__text--container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.modal__text {
+  text-align: center;
+  color: #f4f4f4;
+  font-size: 12px;
+  line-height: 150%;
+}
+.modal__text--container li {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
 .modal__title {
   text-align: center;
   color: #f4f4f4;
   padding-bottom: 21px;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
+  animation: fadeIn 0.5s forwards;
 }
 
-.moadl__text--container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.modal__text {
-  text-align: center;
-  padding-bottom: 10px;
-  color: #f4f4f4;
-  font-size: 12px;
-  line-height: 150%;
+.modal__text--container li:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.modal__text--container li:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.modal__text--container li:nth-child(3) {
+  animation-delay: 1.2s;
 }
 
 .modal__subtitle {
@@ -328,6 +364,7 @@ body {
   background-color: #12b0b9;
   border-radius: 68px;
   color: #132429;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .game__link a:hover {
   background-color: #f4f4f4;
@@ -462,6 +499,10 @@ body {
     gap: 40px;
   }
 
+  .main__img {
+    margin: 0;
+  }
+
   .game__img--front {
     width: 130.5px;
     height: 91.5px;
@@ -501,6 +542,15 @@ body {
     display: flex;
     gap: 60px;
   }
+  .game__container {
+    margin-top: 120px;
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  .game__list {
+    gap: 60px;
+  }
 
   .game__img--front {
     width: 174px;
@@ -523,11 +573,14 @@ body {
 /* MIN_WIDTH 1000PX STYLE  */
 
 @media screen and (min-width: 1000px) {
+  .hero__section {
+    margin-bottom: 40px;
+  }
+
   .btn__container {
-    /* margin-top: 18px; */
-    /* margin-bottom: 95px; */
     padding: 0;
     margin: 0;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -583,4 +636,190 @@ body {
   }
 }
 
-/* MIN_WIDTH 1440px STYLE  */
+/* MIN_WIDTH 1920px STYLE  */
+
+@media screen and (min-width: 1920px) {
+  body {
+    background: center / cover no-repeat url("./img/bcg1920.png");
+  }
+
+  .header {
+    margin-top: 20px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  .container {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  .logo {
+    gap: 40px;
+  }
+  .logo__icon {
+    width: 80px;
+    height: 80px;
+  }
+  .brandname__icon {
+    width: 170px;
+    height: 84px;
+  }
+
+  .social-network {
+    gap: 30px;
+  }
+  .main__title {
+    font-size: 60px;
+  }
+  .main__subtitle {
+    padding-top: 40px;
+    font-size: 32px;
+  }
+  .main__text {
+    padding-top: 40px;
+    font-size: 16px;
+  }
+  .main__title--small {
+    padding: 0;
+  }
+  .main__img {
+    margin: 0;
+    width: 754px;
+    height: 566px;
+  }
+
+  .hero__section {
+    gap: 0;
+  }
+
+  .hero__text--container {
+    padding-top: 145.5px;
+    padding-bottom: 145.5px;
+    padding-right: 148px;
+  }
+  .btn__container {
+    margin-top: 27px;
+    margin-bottom: 58px;
+  }
+  .btn__top,
+  .btn__bottom {
+    height: 60px;
+  }
+  .lds-spinner {
+    color: official;
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-top: 109px;
+  }
+  .lds-spinner div {
+    transform-origin: 100px 80px;
+    animation: lds-spinner 1.2s linear infinite;
+  }
+  .lds-spinner div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 61px;
+    border-radius: 25px;
+    background: #fff;
+  }
+
+  .modal__content {
+    padding-top: 220px;
+    padding-left: 580px;
+    padding-right: 580px;
+  }
+  .modal__title {
+    font-size: 48px;
+    padding-bottom: 50px;
+  }
+  .modal__text--container {
+    gap: 25px;
+    padding-bottom: 35px;
+  }
+  .modal__text {
+    font-size: 16px;
+  }
+
+  .modal__subtitle {
+    padding-top: 105px;
+    font-size: 20px;
+  }
+
+  .modal__img {
+    width: 292px;
+    height: 267px;
+  }
+  .newText__title {
+    padding-top: 65px;
+    font-size: 20px;
+    padding-bottom: 35px;
+  }
+  .game__link a {
+    height: 46px;
+  }
+
+  /* GAME PAGE STYLE  */
+
+  .game__container {
+    padding-left: 345px;
+    padding-right: 345px;
+    margin-top: 172px;
+  }
+  .game__list {
+    gap: 175.5px;
+  }
+
+  .game__img--front {
+    width: 168px;
+    height: 124px;
+  }
+  .game__img--inner {
+    top: -30px;
+    width: 168px;
+    height: 73px;
+  }
+  .game__img--had {
+    top: -30px;
+    width: 168px;
+    height: 93px;
+  }
+  .game__modal--content {
+    margin-top: 370px;
+  }
+  .game__modal--title {
+    font-size: 64px;
+    padding-bottom: 130px;
+  }
+  .game__modal--btn {
+    margin-top: 150px;
+  }
+  /* WINNER PAGE STYLE  */
+
+  .winner__container {
+    padding-left: 572px;
+    padding-right: 572px;
+    margin-top: 139px;
+  }
+  .winner__img {
+    width: 354px;
+    height: 379px;
+  }
+  .winner__title {
+    font-size: 40px;
+    padding-top: 56px;
+    padding-bottom: 32px;
+  }
+  .winner__subtitle {
+    font-size: 24px;
+  }
+  .winner__text {
+    font-size: 24px;
+    padding-top: 29px;
+  }
+}

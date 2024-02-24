@@ -15,7 +15,7 @@ function openModal() {
         modalContent.innerHTML = '';
 
         const newTextModal = ` 
-            <img src="./img/box-close.png" alt="box close img">
+            <img class= 'modal__img' src="./img/box-close.png" alt="box close img">
             <h2 class="newText__title">Herzlichen Glückwunsch,
                 Sie haben erfolgreich überprüft,
                 dass Sie eine echte Person sind.</h2>
@@ -28,7 +28,7 @@ function openModal() {
         `;
         
         modalContent.innerHTML = newTextModal;
-    }, 3000);
+    }, 2000);
 }
 
 

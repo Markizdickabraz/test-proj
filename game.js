@@ -5,8 +5,7 @@ const gameModal = document.querySelector('.game__modal')
 
 gameItems.forEach(item => {
     item.addEventListener('click', function () {
-        var viewportWidth = window.innerWidth;
-console.log('Ширина вьюпорту: ' + viewportWidth);
+        const viewportWidth = window.innerWidth;
         
         if (modalIsOpen) {
             if (viewportWidth >= 768 && viewportWidth <= 899) {
