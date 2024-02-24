@@ -5,11 +5,28 @@ const gameModal = document.querySelector('.game__modal')
 
 gameItems.forEach(item => {
     item.addEventListener('click', function () {
+        var viewportWidth = window.innerWidth;
+console.log('Ширина вьюпорту: ' + viewportWidth);
+        
         if (modalIsOpen) {
-            item.children[1].style = 'top: -25px;'
+            if (viewportWidth >= 768 && viewportWidth <= 899) {
+                item.children[1].style = 'top: -45px;'
+            } else if (viewportWidth >= 900) {
+                item.children[1].style = 'top: -55px;'
+            } else {
+                item.children[1].style = 'top: -25px;'
+            }
             window.location.href = "./winner.html";
         } else {
-            item.children[1].style = 'top: -25px;'
+            if (viewportWidth >= 768 && viewportWidth <= 899) {
+                item.children[1].style = 'top: -45px;'
+            }
+            else if (viewportWidth >= 900) {
+                item.children[1].style = 'top: -55px;'
+            }
+            else {
+                item.children[1].style = 'top: -25px;'
+            }
             openModal();
             modalIsOpen = true;
         }
