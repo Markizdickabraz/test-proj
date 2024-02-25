@@ -164,7 +164,7 @@ body {
 .btn__top a,
 .btn__bottom a {
   color: #132429;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn__bottom {
@@ -428,13 +428,13 @@ body {
 }
 .game__img--inner {
   position: absolute;
-  top: -15px;
+  top: -16px;
   width: 87px;
   height: 36px;
 }
 .game__img--had {
   position: absolute;
-  top: -15px;
+  top: -16px;
   width: 87px;
   height: 46px;
   z-index: 1;
@@ -539,13 +539,13 @@ body {
   }
   .game__img--inner {
     position: absolute;
-    top: -22.5px;
+    top: -24px;
     width: 130.5px;
     height: 54px;
   }
   .game__img--had {
     position: absolute;
-    top: -22.5px;
+    top: -24px;
     width: 130.5px;
     height: 69px;
     z-index: 1;
@@ -588,13 +588,13 @@ body {
   }
   .game__img--inner {
     position: absolute;
-    top: -30px;
+    top: -32px;
     width: 174px;
     height: 72px;
   }
   .game__img--had {
     position: absolute;
-    top: -30px;
+    top: -32px;
     width: 174px;
     height: 92px;
     z-index: 1;
@@ -647,7 +647,7 @@ body {
   .btn__top a,
   .btn__bottom a {
     color: #132429;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .btn__bottom {
@@ -837,12 +837,12 @@ body {
     height: 124px;
   }
   .game__img--inner {
-    top: -30px;
+    top: -32px;
     width: 168px;
     height: 73px;
   }
   .game__img--had {
-    top: -30px;
+    top: -32px;
     width: 168px;
     height: 93px;
   }

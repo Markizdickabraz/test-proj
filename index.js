@@ -3,8 +3,6 @@ const main = document.querySelector('.main');
 const modalContent = document.querySelector('.modal__content');
 const header = document.querySelector('.header');
 
-
-// var closeModalBtn = document.getElementById('closeModalBtn');
 var modal = document.getElementById('modal');
 
 function openModal() {
@@ -14,12 +12,11 @@ function openModal() {
         header.innerHTML = '';
         modalContent.innerHTML = '';
 
-        const newTextModal = ` 
-        
+        const newTextModal = `
             <div class='modal__img--container'>
-            <img class= 'modal__img--front' src="./img/box-front.png" alt="box close img">
-            <img class= 'modal__img--inner' src="./img/box-inner.png" alt="box close img">
-            <img class= 'modal__img--had' src="./img/box-had.png" alt="box close img"> </div>
+            <img class= 'modal__img--front' src="./img/box-big-front.png" alt="box close img">
+            <img class= 'modal__img--inner' src="./img/box-big-inner.png" alt="box close img">
+            <img class= 'modal__img--had' src="./img/box-big-had.png" alt="box close img"> </div>
             <h2 class="newText__title">Herzlichen Glückwunsch,
                 Sie haben erfolgreich überprüft,
                 dass Sie eine echte Person sind.</h2>
@@ -42,4 +39,3 @@ function closeModal() {
 
 modalBtn.addEventListener('click', openModal);
 
-            // <img class= 'modal__img' src="./img/box-close.png" alt="box close img">
