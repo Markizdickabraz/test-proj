@@ -420,6 +420,7 @@ body {
 }
 .game__item {
   position: relative;
+  transition: all 0.5s ease;
 }
 
 .game__img--front {
@@ -438,7 +439,17 @@ body {
   width: 87px;
   height: 46px;
   z-index: 1;
+  transition: all 0.5s ease;
 }
+
+.boxOpen {
+  text-align: center;
+  padding-top: 3rem;
+  color: #f4f4f4;
+  font-size: 2rem;
+  padding-bottom: 3rem;
+}
+
 .game__modal {
   display: none;
   position: fixed;
