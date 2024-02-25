@@ -7,30 +7,34 @@ gameItems.forEach(item => {
     item.addEventListener('click', function () {
         const viewportWidth = window.innerWidth;
         
-        if (modalIsOpen) {
-            if (viewportWidth >= 768 && viewportWidth <= 899) {
-                item.children[1].style = 'top: -45px;'
-            } else if (viewportWidth >= 900) {
-                item.children[1].style = 'top: -55px;'
-            } else {
-                item.children[1].style = 'top: -25px;'
-            }
-            window.location.href = "./winner.html";
+        const box = item.children[1];
+        
+        box.style.transition = 'top 0.5s ease';
+        
+        let newTop;
+        if (viewportWidth >= 768 && viewportWidth <= 899) {
+            newTop = '-45px';
+        } else if (viewportWidth >= 900) {
+            newTop = '-55px';
         } else {
-            if (viewportWidth >= 768 && viewportWidth <= 899) {
-                item.children[1].style = 'top: -45px;'
-            }
-            else if (viewportWidth >= 900) {
-                item.children[1].style = 'top: -55px;'
-            }
-            else {
-                item.children[1].style = 'top: -25px;'
-            }
-            openModal();
-            modalIsOpen = true;
+            newTop = '-25px';
         }
+        
+        setTimeout(() => {
+            box.style.top = newTop;
+        }, 0);
+        
+        setTimeout(() => {
+            if (modalIsOpen) {
+                window.location.href = "./winner.html";
+            } else {
+                openModal();
+                modalIsOpen = true;
+            }
+        }, 600);
     });
 });
+
 
 const okButton = document.getElementById('close__modal');
 okButton.addEventListener('click', function (e) {

@@ -15,7 +15,11 @@ function openModal() {
         modalContent.innerHTML = '';
 
         const newTextModal = ` 
-            <img class= 'modal__img' src="./img/box-close.png" alt="box close img">
+        
+            <div class='modal__img--container'>
+            <img class= 'modal__img--front' src="./img/box-front.png" alt="box close img">
+            <img class= 'modal__img--inner' src="./img/box-inner.png" alt="box close img">
+            <img class= 'modal__img--had' src="./img/box-had.png" alt="box close img"> </div>
             <h2 class="newText__title">Herzlichen Glückwunsch,
                 Sie haben erfolgreich überprüft,
                 dass Sie eine echte Person sind.</h2>
@@ -38,3 +42,4 @@ function closeModal() {
 
 modalBtn.addEventListener('click', openModal);
 
+            // <img class= 'modal__img' src="./img/box-close.png" alt="box close img">
